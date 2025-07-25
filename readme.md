@@ -1,1 +1,1 @@
-Este es un proyecto de ecommerce que incluye HTMl y CSS.
+Este es un proyecto de ecommerce que incluye HTMl, CSS y JavaScript.
