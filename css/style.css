@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Bree Serif', serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #1e2a38;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    background-color: #1e2a38;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    padding-top: 120px;
+}
+
+.header-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    width: auto;
+    height: 60px;
+    max-width: 100%;
+    object-fit: contain;
+}
+.logo a {
+    display: inline-block;
+}
+
+.logo a img {
+    display: block;
+    width: 80px;
+    height: auto;
+}
+
+.navegacion ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navegacion li {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.navegacion a {
+    color: white;
+    text-decoration: none;
+}
+.navegacion li:hover {
+    color: #ffd700;
+}
+
+.cart a {
+    color: white;
+    text-decoration: none;
+    background-color: #f04e30;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.cart a:hover {
+    background-color: #c43d24;
+}
+
+main .container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.inicio-sect {
+    background: url('../img/montaña-bg.jpg') no-repeat center center/cover;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.productos-sect h2,
+.reseñas-sect h2,
+.contacto-sect h2 {
+    margin-bottom: 20px;
+    color: #1e2a38;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: #1e2a38;
+}
+
+.product-card p {
+    color: #f04e30;
+    font-weight: bold;
+    font-size: 1rem;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.reseñas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.reseña-item {
+    background-color: white;
+    padding: 20px;
+    border-left: 5px solid #1e2a38;
+    border-radius: 5px;
+}
+
+.contacto-sect form > div {
+    margin-bottom: 15px;
+    border-color: #f04e30;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.boton {
+    background-color: #1e2a38;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: #314358;
+}
+
+footer {
+    background-color: #1e2a38;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+/* Carritoo */
+.carrito-container {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    width: 300px;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 15px;
+    border-radius: 8px;
+    z-index: 200;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+#lista-carrito li {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.eliminar-producto {
+    margin-left: 10px;
+    background-color: #f04e30;
+    color: white;
+    border: none;
+    padding: 2px 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.eliminar-producto:hover {
+    background-color: #c43d24;
+}
+
+
+/* Menu navegacion */
+.menu-hamburguesa {
+    display: none;
+    font-size: 30px;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+@media (max-width: 576px) {
+    .menu-hamburguesa {
+        display: block;
+    }
+
+    .navegacion {
+        display: none;
+        width: 100%;
+        text-align: center;
+        background-color: #1e2a38;
+    }
+
+    .navegacion.active {
+        display: block;
+    }
+
+    .navegacion ul {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .navegacion li {
+        padding: 10px 0;
+    }
+
+    .cart {
+        display: none;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+  .product-grid,
+  .reseñas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .header-div {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+}

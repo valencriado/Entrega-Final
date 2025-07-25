@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-Entrega</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>La Tienda de Productos de Montaña</h1>
+        <div class="header-div">
+            <div class="logo">
+                    <a href="#inicio">
+                        <img src="./multimedia/Logo.png" alt="Logo del sitio">
+                    </a>
+            </div>
+
+            <button id="menu-hamburguesa" class="menu-hamburguesa">&#9776;</button>
+            <nav class="navegacion">
+                <ul>
+                    <li><a href="#tablas">Productos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#reseñas">Reseñas</a></li>
+                </ul>
+            </nav>
+            <div class="cart">
+                <a href="#">Carrito de Compras</a>
+            </div> 
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="inicio-sect">
+            <div class="container">
+                <h2>Productos para tu temprada ideal de invierno</h2>
+                <p>Somos Punto Cero tu tienda para que te equipes con lo necesario en la nieve</p>
+            </div>
+        </section>
+        <section id="tablas" class="productos-sect">
+            <div class="container">
+                <h2>Tablas de Ski y Snowboard</h2>
+                <div class="product-grid">
+                    <article class="product-card">
+                        <img src="./multimedia/tabl.2.webp" alt="Tablas de Ski freestyle">
+                        <h3>Tablas Esquí Freestyle</h3>
+                        <p>$350</p>
+                        <button class="agregar-carrito" data-nombre="Tablas Esquí Freestyle" data-precio="350">Agregar al carrito</button>
+                    </article>
+                    <article class="product-card">
+                        <img src="./multimedia/tabl.3.webp" alt="Ski alpino">
+                        <h3>Esquí Alpino Pro</h3>
+                        <p>$420</p>
+                        <button class="agregar-carrito" data-nombre="Esquí Alpino Pro" data-precio="420">Agregar al carrito</button>
+                    </article>
+                    <article class="product-card">
+                        <img src="./multimedia/tabl.4.webp" alt="Ski de Pista">
+                        <h3>Esquí de Pista</h3>
+                        <p>$400</p>
+                        <button class="agregar-carrito" data-nombre="Esquí de Pista" data-precio="400">Agregar al carrito</button>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section id="ropa" class="productos-sect">
+            <div class="container">
+                <h2>Ropa de Invierno</h2>
+                <div class="product-grid">
+                    <article class="product-card">
+                        <img src="./multimedia/casco.1.jpg" alt="Casco negro">
+                        <h3>Casco negro Ombak</h3>
+                        <p>$30</p>
+                        <button class="agregar-carrito" data-nombre="Casco negro Ombak" data-precio="30">Agregar al carrito</button>
+                    </article>
+                    <article class="product-card">
+                        <img src="./multimedia/casco.2.jpg" alt="Casco Blanco">
+                        <h3>Casco Blanco Ombak</h3>
+                        <p>$40</p>
+                        <button class="agregar-carrito" data-nombre="Casco Blanco Ombak" data-precio="40">Agregar al carrito</button>
+                    </article>
+                    <article class="product-card">
+                        <img src="./multimedia/casco.3.jpg" alt="Casco Gris">
+                        <h3>Casco Gris Ombak</h3>
+                        <p>$20</p>
+                        <button class="agregar-carrito" data-nombre="Casco Gris Ombak" data-precio="20">Agregar al carrito</button>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section id="reseñas" class="reseñas-sect">
+            <div class="container">
+                <h2>Reseñas de nuestros Clientes</h2>
+                <div class="reseñas-grid">
+                    <article class="reseña-item">
+                        <h3>Manuel</h3>
+                        <p>"Los productos son de muy buena calidad."</p>
+                    </article>
+                    <article class="reseña-item">
+                        <h3>Julia</h3>
+                        <p>"La atencion me gusto mucho."</p>
+                    </article>
+                    <article class="reseña-item">
+                        <h3>Juan</h3>
+                        <p>"Tienen una seleccion completa de muchos productos."</p>
+                    </article>
+                </div>                
+            </div>
+        </section>
+        <section id="contacto" class="contacto-sect">
+            <div class="container">
+                <h2>Contacto</h2>
+                <p>Necesitas ayuda o tienes alguna duda? Contactanos.</p>
+                <form id="contacto-form" action="https://formspree.io/f/myzpwyad" method="post">
+                    <div>
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Juan Perez" required>
+                    </div>
+                    <div>
+                        <label for="email">Correo Electronico</label>
+                        <input type="email" id="email" name="email" placeholder="juanperez@gmail.com" required>
+                    </div>
+                    <div>
+                        <label for="mensaje">Consulta</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Mande su Consulta por aqui..." required></textarea>
+                    </div>
+                    <button type="submit" class="boton">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+
+            <div id="carrito-container" class="carrito-container hidden">
+                <h2>Carrito de Compras</h2>
+                <ul id="lista-carrito"></ul>
+                <p id="total">Total: $0</p>
+            </div>
+
+    </main>
+
+    <footer>
+        <p>&Copy; 2025 Tienda online - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="./JS/Script.js"></script>
+
+</body>
+
+</html>
